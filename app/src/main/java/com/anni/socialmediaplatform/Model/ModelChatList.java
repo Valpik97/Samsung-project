@@ -1,6 +1,6 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Model;
 
-class ModelChatList {
+public class ModelChatList {
 
     public String getId() {
         return id;

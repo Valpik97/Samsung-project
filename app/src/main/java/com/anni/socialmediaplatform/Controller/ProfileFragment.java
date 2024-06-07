@@ -1,4 +1,4 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Controller;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,10 +17,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.anni.socialmediaplatform.AdapterPosts;
-import com.anni.socialmediaplatform.EditProfilePage;
-import com.anni.socialmediaplatform.ModelPost;
+import com.anni.socialmediaplatform.Model.ModelPost;
 import com.anni.socialmediaplatform.R;
+import com.anni.socialmediaplatform.Service.AdapterPosts;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;

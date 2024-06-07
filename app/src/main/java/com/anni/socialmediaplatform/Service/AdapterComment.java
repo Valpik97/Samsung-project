@@ -1,4 +1,4 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Service;
 
 
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.anni.socialmediaplatform.Model.ModelComment;
+import com.anni.socialmediaplatform.R;
 import com.bumptech.glide.Glide;
 
 
@@ -19,7 +21,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class AdapterComment extends RecyclerView.Adapter<com.anni.socialmediaplatform.AdapterComment.MyHolder> {
+public class AdapterComment extends RecyclerView.Adapter<AdapterComment.MyHolder> {
 
     Context context;
     List<ModelComment> list;

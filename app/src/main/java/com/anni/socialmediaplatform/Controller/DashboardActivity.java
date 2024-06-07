@@ -1,4 +1,4 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Controller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.anni.socialmediaplatform.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,7 +30,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         navigationView = findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(selectedListener);
-        actionBar.setTitle("Home");
+        actionBar.setTitle("Bond");
 
         // When we open the application first
         // time the fragment should be shown to the user

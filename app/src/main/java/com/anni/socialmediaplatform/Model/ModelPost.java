@@ -1,4 +1,4 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Model;
 
 public class ModelPost {
     public ModelPost() {

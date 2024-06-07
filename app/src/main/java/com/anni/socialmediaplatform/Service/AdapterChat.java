@@ -1,6 +1,5 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Service;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,6 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.anni.socialmediaplatform.Model.ModelChat;
+import com.anni.socialmediaplatform.R;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,7 +33,7 @@ import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class AdapterChat extends RecyclerView.Adapter<com.anni.socialmediaplatform.AdapterChat.Myholder> {
+public class AdapterChat extends RecyclerView.Adapter<AdapterChat.Myholder> {
     private static final int MSG_TYPE_LEFT = 0;
     private static final int MSG_TYPR_RIGHT = 1;
     Context context;

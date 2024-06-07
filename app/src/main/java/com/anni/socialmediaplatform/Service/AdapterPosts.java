@@ -1,16 +1,12 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Service;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.text.format.DateFormat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -22,9 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.anni.socialmediaplatform.Controller.PostDetailsActivity;
+import com.anni.socialmediaplatform.Controller.PostLikedByActivity;
+import com.anni.socialmediaplatform.Model.ModelPost;
+import com.anni.socialmediaplatform.R;
 import com.bumptech.glide.Glide;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -39,10 +38,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 

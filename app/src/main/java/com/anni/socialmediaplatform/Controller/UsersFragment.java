@@ -1,7 +1,6 @@
-package com.anni.socialmediaplatform;
+package com.anni.socialmediaplatform.Controller;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -20,6 +19,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.anni.socialmediaplatform.Model.ModelUsers;
+import com.anni.socialmediaplatform.R;
+import com.anni.socialmediaplatform.Service.AdapterUsers;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

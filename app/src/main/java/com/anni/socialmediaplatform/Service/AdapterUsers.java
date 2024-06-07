@@ -1,6 +1,7 @@
 package com.anni.socialmediaplatform.Service;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.anni.socialmediaplatform.Controller.ChatActivity;
 import com.anni.socialmediaplatform.Model.ModelUsers;
 import com.anni.socialmediaplatform.R;
 import com.bumptech.glide.Glide;
@@ -28,48 +30,58 @@ public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyHolder> {
     public AdapterUsers(Context context, List<ModelUsers> list) {
         this.context = context;
         this.list = list;
-        firebaseAuth = FirebaseAuth.getInstance();
-        uid = firebaseAuth.getUid();
+        firebaseAuth= FirebaseAuth.getInstance();
+        uid=firebaseAuth.getUid();
     }
 
     List<ModelUsers> list;
-
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_users, parent, false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row_users,parent,false);
         return new MyHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, final int position) {
-        final String hisuid = list.get(position).getUid();
-        String userImage = list.get(position).getImage();
-        String username = list.get(position).getName();
-        String usermail = list.get(position).getEmail();
+        final String hisuid=list.get(position).getUid();
+        String userImage=list.get(position).getImage();
+        String username=list.get(position).getName();
+        String usermail=list.get(position).getEmail();
         holder.name.setText(username);
         holder.email.setText(usermail);
         try {
             Glide.with(context).load(userImage).into(holder.profiletv);
-        } catch (Exception e) {
         }
+        catch (Exception e){
+        }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(context, ChatActivity.class);
+                intent.putExtra("uid",hisuid);
+                context.startActivity(intent);
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {
         return list.size();
     }
 
-    class MyHolder extends RecyclerView.ViewHolder {
+    class MyHolder extends RecyclerView.ViewHolder{
 
         CircleImageView profiletv;
-        TextView name, email;
+        TextView name,email;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
-            profiletv = itemView.findViewById(R.id.imagep);
-            name = itemView.findViewById(R.id.namep);
-            email = itemView.findViewById(R.id.emailp);
+            profiletv=itemView.findViewById(R.id.imagep);
+            name=itemView.findViewById(R.id.namep);
+            email=itemView.findViewById(R.id.emailp);
         }
     }
 }

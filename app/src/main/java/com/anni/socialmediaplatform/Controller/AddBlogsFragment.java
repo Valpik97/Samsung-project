@@ -81,6 +81,9 @@ public class AddBlogsFragment extends Fragment {
         upload = view.findViewById(R.id.pupload);
         pd = new ProgressDialog(getContext());
         pd.setCanceledOnTouchOutside(false);
+        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
         Intent intent = getActivity().getIntent();
 
         // Retrieving the user data like name ,email and profile pic using query

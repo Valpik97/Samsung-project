@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "275482376134",
+    "firebase_url": "https://social-7b7df-default-rtdb.firebaseio.com",
+    "project_id": "social-7b7df",
+    "storage_bucket": "social-7b7df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275482376134:android:df44c7cee036d103b724c7",
+        "android_client_info": {
+          "package_name": "com.anni.socialmediaplatform"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFZLR8rxr_rjOeKyCocn4E8z6FMDV6cVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
